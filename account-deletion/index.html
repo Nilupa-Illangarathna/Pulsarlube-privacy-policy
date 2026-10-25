@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pulsarlube – Account &amp; Data Deletion</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #F6F6F8;
+      color: #161616;
+      line-height: 1.85;
+    }
+
+    header {
+      background: #FFFFFF;
+      border-bottom: 1px solid #EDEDF1;
+      padding: 20px 24px 36px;
+      text-align: center;
+    }
+
+    .lang-bar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 6px;
+      margin-bottom: 32px;
+    }
+    .lang-bar a {
+      color: #8B93A5;
+      text-decoration: none;
+      font-size: 0.73rem;
+      font-weight: 600;
+      padding: 3px 11px;
+      border-radius: 20px;
+      border: 1px solid #EDEDF1;
+      letter-spacing: 0.4px;
+    }
+    .lang-bar a:hover { color: #161616; border-color: #8B93A5; }
+
+    .logo-mark { display: flex; align-items: center; justify-content: center; gap: 10px; }
+    .logo-mark svg:first-child { width: 30px; height: 30px; }
+    .logo-mark svg:last-child { height: 17px; width: auto; }
+
+    .tagline {
+      margin-top: 10px;
+      font-size: 0.85rem;
+      color: #8B93A5;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 28px 20px 80px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      border: 1px solid #EDEDF1;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+      padding: 40px 48px;
+    }
+    @media (max-width: 600px) {
+      .card { padding: 24px 20px; }
+      .logo-mark svg:last-child { height: 14px; }
+    }
+
+    .pill-label {
+      display: inline-block;
+      background: #EEF2FF;
+      color: #0054A6;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 30px;
+    }
+
+    .section-divider {
+      border: none;
+      border-top: 2px solid #F6F6F8;
+      margin: 40px 0;
+    }
+
+    .lang-section { margin-top: 0; }
+    .lang-label {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: rgba(0,0,0,0.25);
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #EDEDF1;
+      width: 100%;
+    }
+
+    h2 {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: #161616;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      padding-left: 11px;
+      border-left: 3px solid #0054A6;
+      border-bottom: 1px solid #EDEDF1;
+    }
+    h2:first-of-type { margin-top: 0; }
+
+    p { margin-top: 8px; color: #444; font-size: 0.93rem; }
+
+    ul {
+      margin-top: 8px;
+      padding-left: 18px;
+      color: #444;
+      font-size: 0.93rem;
+    }
+    ul li { margin-top: 5px; }
+
+    .steps {
+      margin-top: 12px;
+      padding-left: 0;
+      list-style: none;
+      counter-reset: steps;
+    }
+    .steps li {
+      counter-increment: steps;
+      padding: 10px 14px 10px 44px;
+      margin-top: 8px;
+      background: #F6F6F8;
+      border-radius: 8px;
+      font-size: 0.93rem;
+      color: #333;
+      position: relative;
+    }
+    .steps li::before {
+      content: counter(steps);
+      position: absolute;
+      left: 14px;
+      top: 10px;
+      width: 22px;
+      height: 22px;
+      background: #0054A6;
+      color: white;
+      border-radius: 50%;
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .highlight-box {
+      background: #EEF2FF;
+      border-left: 3px solid #0054A6;
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
+      margin-top: 12px;
+      font-size: 0.9rem;
+      color: #333;
+    }
+    .highlight-box strong { color: #0054A6; }
+
+    a { color: #0054A6; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      padding: 28px 24px;
+      font-size: 0.78rem;
+      color: #ABB2BF;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="lang-bar">
+    <a href="../en/">Privacy Policy</a>
+  </div>
+  <div class="logo-mark">
+    <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M24.2135 19.004C24.2935 18.9965 24.3953 18.9959 24.4771 18.9953C25.9383 18.9838 27.343 19.5601 28.3756 20.5948C29.4073 21.6183 29.9905 23.0099 29.997 24.4637C30.0056 25.9208 29.4334 27.3212 28.4072 28.3548C27.7335 29.0377 26.8912 29.53 25.9659 29.7817C24.8947 30.066 23.008 29.9912 21.83 29.9912L17.118 29.9897C15.149 29.9967 13.1799 29.9934 11.2109 29.9798C11.9953 29.2667 12.9462 28.2628 13.7097 27.4992L18.3671 22.84C20.2201 20.9852 21.4163 19.2335 24.2135 19.004Z" fill="#0054A6"/>
+      <path d="M24.0463 0.0352159C24.1825 0.0218246 24.3193 0.0152208 24.4562 0.0154776C25.9242 -0.000922147 27.3368 0.574942 28.3756 1.61316C29.9852 3.21193 29.999 4.74221 29.9969 6.84179L29.9939 9.42192L29.9968 18.7974C29.2554 17.9876 28.2474 17.0355 27.4559 16.2448L22.7225 11.51C21.9038 10.6913 20.2526 9.21151 19.7324 8.2641C17.7735 4.69613 19.9235 0.463262 24.0463 0.0352159Z" fill="#0054A6"/>
+      <path d="M6.13222 0.00146478L13.1755 0.00340961C15.0469 -0.004295 16.9184 0.00106141 18.7898 0.0194424C18.4565 0.303339 18.031 0.752517 17.7144 1.06921L15.8961 2.88831L10.1683 8.61719C8.79715 10.0037 7.70368 10.9519 5.62025 10.9959C4.1495 11.0305 2.72673 10.471 1.67303 9.44349C0.636267 8.43657 0.0383311 7.0609 0.00911255 5.61533C-0.0227456 4.15179 0.532041 2.73638 1.54967 1.68481C2.91099 0.285288 4.28261 0.0280273 6.13222 0.00146478Z" fill="#0054A6"/>
+      <path d="M0.00745065 11.2373C0.0836682 11.2949 0.138146 11.3494 0.205272 11.4164C2.32294 13.5312 4.4387 15.6497 6.556 17.7648L8.47841 19.6864C9.03195 20.2401 9.6987 20.8431 10.1163 21.5008C11.5288 23.725 11.2246 26.4991 9.38474 28.3788C8.31036 29.4286 7.01162 29.9729 5.50321 29.9762C4.03734 29.9854 2.62994 29.4019 1.60006 28.3579C0.90901 27.6675 0.353344 26.6692 0.137046 25.7147C-0.0347462 24.9566 0.0035277 24.0125 0.00385764 23.2247L0.00528746 20.6848L0.00745065 11.2373Z" fill="#0054A6"/>
+    </svg>
+    <svg viewBox="0 0 206 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0.00206262 -0.000196457H16.8021V11.7598H3.36206V16.7998H0.00206262V-0.000196457ZM13.4421 8.4238V3.3838H3.36206V8.4238H13.4421ZM37.8021 -0.000196457V16.7998H21.0021V-0.000196457H24.3621V13.4398H34.4421V-0.000196457H37.8021ZM45.3621 13.4398H58.8021V16.7998H42.0021V-0.000196457H45.3621V13.4398ZM66.3386 6.7438H79.7786V16.7998H62.9786V13.4398H76.3946V10.1038H62.9786V-0.000196457H76.3946V3.3838H66.3386V6.7438ZM83.9552 -0.000196457H100.755V16.7998H97.3952V11.7598H87.3152V16.7998H83.9552V-0.000196457ZM87.3152 8.4238H97.3952V3.3838H87.3152V8.4238ZM104.955 -0.000196457H121.755V3.3838H108.315V16.7998H104.955V-0.000196457ZM129.315 13.4398H142.755V16.7998H125.955V-0.000196457H129.315V13.4398ZM163.732 -0.000196457V16.7998H146.932V-0.000196457H150.292V13.4398H160.372V-0.000196457H163.732ZM181.348 6.7438H184.732V16.7998H167.932V-0.000196457H181.348V6.7438ZM171.268 3.3838V6.7438H177.988V3.3838H171.268ZM181.348 13.4398V10.0798H171.268V13.4398H181.348ZM205.708 16.7998H188.908V13.4398H205.708V16.7998ZM205.708 3.3838H188.908V-0.000196457H205.708V3.3838ZM202.324 10.1038H188.908V6.7438H202.324V10.1038Z" fill="#0054A6"/>
+    </svg>
+  </div>
+  <div class="tagline">Account &amp; Data Deletion</div>
+</header>
+
+<main>
+  <div class="card">
+
+    <!-- ── ENGLISH ── -->
+    <div class="lang-section">
+      <span class="lang-label">English</span>
+
+      <span class="pill-label">Account &amp; Data Deletion</span>
+
+      <h2>Your Right to Delete</h2>
+      <p>You may request the deletion of your Pulsarlube account and all associated personal data at any time. We will process your request within <strong>7 business days</strong>. If your account was provisioned by your employer/organization, your organization's administrator may need to be involved in removing your access to any shared equipment or group data.</p>
+
+      <h2>How to Request Deletion</h2>
+      <ol class="steps">
+        <li>Send an email to <a href="mailto:ej.jang@pulsarlube.com">ej.jang@pulsarlube.com</a></li>
+        <li>Use the subject line: <strong>Account Deletion Request</strong></li>
+        <li>Include the email address registered to your account so we can identify it</li>
+        <li>You will receive a confirmation email once the deletion is complete</li>
+      </ol>
+
+      <div class="highlight-box">
+        <strong>Email:</strong> <a href="mailto:ej.jang@pulsarlube.com">ej.jang@pulsarlube.com</a><br>
+        <strong>Subject:</strong> Account Deletion Request
+      </div>
+
+      <h2>What Gets Deleted</h2>
+      <ul>
+        <li>Your account and login credentials (email address, name)</li>
+        <li>Your personal access to registered device records and group/location assignments</li>
+        <li>App preferences and notification settings</li>
+        <li>Push notification tokens</li>
+        <li>Customer support conversation history</li>
+      </ul>
+
+      <h2>What May Be Retained</h2>
+      <p>The following data may be retained for a limited period after deletion:</p>
+      <ul>
+        <li><strong>Server access/security logs</strong> — retained briefly for security and operational purposes, not linked to your identity after your account is deleted</li>
+        <li><strong>Legal or compliance records</strong> — retained only where required by applicable law</li>
+        <li><strong>Equipment and device records owned by your organization</strong> — these remain with your organization's account, since they belong to your employer, not to you individually</li>
+      </ul>
+
+      <h2>In-App Deletion</h2>
+      <p>If the app offers an in-app account deletion option, you may also use that. The same data listed above will be removed.</p>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- ── KOREAN ── -->
+    <div class="lang-section">
+      <span class="lang-label">한국어</span>
+
+      <h2>삭제 권리</h2>
+      <p>Pulsarlube 계정 및 관련 개인 정보의 삭제를 언제든지 요청할 수 있습니다. 요청은 <strong>영업일 기준 7일 이내</strong>에 처리됩니다. 계정이 소속 조직(고용주)에 의해 발급된 경우, 공유 설비 또는 그룹 데이터에 대한 접근 권한 제거에는 조직 관리자의 협조가 필요할 수 있습니다.</p>
+
+      <h2>삭제 요청 방법</h2>
+      <ol class="steps">
+        <li><a href="mailto:ej.jang@pulsarlube.com">ej.jang@pulsarlube.com</a>으로 이메일을 보내주세요</li>
+        <li>제목란에 <strong>계정 삭제 요청</strong>이라고 입력해 주세요</li>
+        <li>계정 확인을 위해 등록된 이메일 주소를 함께 기재해 주세요</li>
+        <li>삭제 완료 후 확인 이메일이 발송됩니다</li>
+      </ol>
+
+      <div class="highlight-box">
+        <strong>이메일:</strong> <a href="mailto:ej.jang@pulsarlube.com">ej.jang@pulsarlube.com</a><br>
+        <strong>제목:</strong> 계정 삭제 요청
+      </div>
+
+      <h2>삭제되는 데이터</h2>
+      <ul>
+        <li>계정 및 로그인 정보 (이메일 주소, 이름)</li>
+        <li>등록된 기기 기록 및 그룹/위치 배정에 대한 개인 접근 권한</li>
+        <li>앱 환경설정 및 알림 설정</li>
+        <li>푸시 알림 토큰</li>
+        <li>고객 지원 대화 내역</li>
+      </ul>
+
+      <h2>보존될 수 있는 데이터</h2>
+      <p>삭제 후 일정 기간 동안 다음 데이터가 보존될 수 있습니다:</p>
+      <ul>
+        <li><strong>서버 접속/보안 로그</strong> — 보안 및 운영 목적으로 단기간 보존되며, 계정 삭제 후 귀하의 신원과 연결되지 않습니다</li>
+        <li><strong>법적 요구 사항</strong> — 관련 법률에 따라 필요한 경우에만 보존</li>
+        <li><strong>조직 소유의 설비 및 기기 기록</strong> — 이는 귀하 개인이 아닌 소속 조직의 자산이므로 조직 계정에 그대로 유지됩니다</li>
+      </ul>
+
+      <h2>앱 내 삭제</h2>
+      <p>앱에서 계정 삭제 기능을 제공하는 경우, 해당 기능을 통해서도 삭제를 요청하실 수 있습니다. 위에 명시된 동일한 데이터가 삭제됩니다.</p>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- ── JAPANESE ── -->
+    <div class="lang-section">
+      <span class="lang-label">日本語</span>
+
+      <h2>削除を請求する権利</h2>
+      <p>Pulsarlube アカウントおよび関連するすべての個人データの削除は、いつでもご依頼いただけます。ご依頼は<strong>営業日で7日以内</strong>に処理いたします。アカウントが所属組織（雇用主）によって発行されている場合、共有設備またはグループデータへのアクセス権の削除には組織管理者の協力が必要になる場合があります。</p>
+
+      <h2>削除の依頼方法</h2>
+      <ol class="steps">
+        <li><a href="mailto:ej.jang@pulsarlube.com">ej.jang@pulsarlube.com</a> 宛にメールをお送りください</li>
+        <li>件名に <strong>Account Deletion Request（アカウント削除依頼）</strong> とご記入ください</li>
+        <li>アカウント確認のため、登録済みのメールアドレスをご記載ください</li>
+        <li>削除完了後、確認メールをお送りします</li>
+      </ol>
+
+      <div class="highlight-box">
+        <strong>メール：</strong> <a href="mailto:ej.jang@pulsarlube.com">ej.jang@pulsarlube.com</a><br>
+        <strong>件名：</strong> Account Deletion Request
+      </div>
+
+      <h2>削除されるデータ</h2>
+      <ul>
+        <li>アカウントおよびログイン情報（メールアドレス、お名前）</li>
+        <li>登録デバイス記録およびグループ・拠点割り当てへの個人アクセス権</li>
+        <li>アプリの環境設定および通知設定</li>
+        <li>プッシュ通知トークン</li>
+        <li>カスタマーサポートの会話履歴</li>
+      </ul>
+
+      <h2>保持される場合があるデータ</h2>
+      <p>削除後、一定期間以下のデータが保持される場合があります：</p>
+      <ul>
+        <li><strong>サーバーアクセス・セキュリティログ</strong> — セキュリティおよび運用目的で短期間保持され、アカウント削除後はお客様の個人情報と関連付けられません</li>
+        <li><strong>法令遵守に関する記録</strong> — 適用法令で必要な場合にのみ保持されます</li>
+        <li><strong>組織が所有する設備・デバイス記録</strong> — これらはお客様個人ではなく所属組織の資産であるため、組織のアカウントにそのまま残ります</li>
+      </ul>
+
+      <h2>アプリ内での削除</h2>
+      <p>アプリ内にアカウント削除機能がある場合は、そちらもご利用いただけます。上記と同じデータが削除されます。</p>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  &copy; 2026 Pulsarlube. All rights reserved.
+</footer>
+
+</body>
+</html>
